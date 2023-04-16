@@ -1,5 +1,5 @@
 import * as THREE from 'three';
-import * as dat from 'dat.gui';
+// import * as dat from 'dat.gui';
 import nebula from "../img/nebula.jpg";
 import stars from "../img/stars.jpg";
 // import stars2 from "../img/296702.jpg";
@@ -54,7 +54,7 @@ scene.add(directionalLight);
 directionalLight.position.set(-30, 50, 0);
 directionalLight.castShadow = true;
 directionalLight.shadow.camera.right = 20;
-directionalLight.shadow.camera.bottom = -30;
+directionalLight.shadow.camera.bottom = -30;s
 directionalLight.shadow.camera.top = 20;
 
 const gLightHelper =  new THREE.DirectionalLightHelper(directionalLight, 5);
@@ -66,23 +66,23 @@ const cameraHelper = new THREE.CameraHelper(directionalLight.shadow.camera);
 const gridHelper = new THREE.GridHelper(30);
 scene.add(gridHelper);
 
-const gui = new dat.GUI();
+// const gui = new dat.GUI();
 
-const options = {
-    sphereColor: '#ffea00',
-    wireframe: true,
-    speed : 0.01
-}
+// const options = {
+//     sphereColor: '#ffea00',
+//     wireframe: true,
+//     speed : 0.01
+// }
 
-gui.addColor(options, 'sphereColor').onChange(function(e){
-    sphere.material.color.set(e);
-})
+// gui.addColor(options, 'sphereColor').onChange(function(e){
+//     sphere.material.color.set(e);
+// })
 
-gui.add(options, 'wireframe').onChange(function(e){
-    sphere.material.wireframe = e;
-})
+// gui.add(options, 'wireframe').onChange(function(e){
+//     sphere.material.wireframe = e;
+// })
 
-gui.add(options, 'speed', 0, 0.1);
+// gui.add(options, 'speed', 0, 0.1);
 
 let step = 0;
 function animate(time){
